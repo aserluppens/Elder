@@ -1,0 +1,31 @@
+try:
+    first_wizard_wand = input()
+
+    number_of_duels = int(input())
+
+    new_wizard_wand = first_wizard_wand
+
+    final_holder = first_wizard_wand
+
+    holder = 1
+
+    for i in range (number_of_duels):
+        wizard_duel = input()
+        
+        winner = wizard_duel[0]
+        loser = wizard_duel[2]
+    
+        if loser == final_holder and (winner not in new_wizard_wand) :
+            new_wizard_wand += winner
+            holder +=1
+            final_holder = winner
+    
+        elif winner in new_wizard_wand and final_holder == loser:
+            final_holder = winner
+        
+
+    print (final_holder.upper())
+    print (holder)
+
+except:
+    pass
